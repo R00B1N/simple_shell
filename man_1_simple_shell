@@ -1,0 +1,51 @@
+." manpage for our simple shell
+
+.TH HSH 1 "13 abril 2021" "Version 1.0" "General Command"
+
+.SH NAME
+.BI hsh
+- UNIX command interpreter (shell)
+.SH SYNOPSIS
+.BI hsh
+[command_string][argument]
+
+.SH DESCRIPTION
+.BI hsh
+is an simple UNIX command interpreter, that takes user input from standard input, interprets it, and finally executes it. it is also possible to execute interactively redirected the standard output of a command external to it by means of the pipe "|".
+.SS Bilt-in 
+functions integrated into this Shell
+.br
+.br
+- cd [DIRECTORY].
+.br
+- exit [STATUS].
+.br
+- env.
+.br
+- help [NAME BUILT-IN]
+.br
+- setenv [VARIABLE] [VALUE]
+.br
+- unsetenv [VARIABLE]
+.SH USAGE EXAMPLE
+.SS Normal mode
+$ ./hsh
+.br
+($) /bin/ls
+.br
+($) hsh main.c shell.c
+.br
+($) exit
+.br
+$
+.SS Interactive mode
+$ echo "/bin/ls" | ./hsh
+.br
+hsh main.c shell.c test_ls_2
+.br
+$
+.SH RETURN VALUE
+Success 0 or fail [1- 255]
+
+.SH AUTHORS
+Bladimir Pelaez, Elizabeth Cuentas
