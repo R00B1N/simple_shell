@@ -22,7 +22,6 @@ The syntax for executing commands on this simple shell it's the same as other th
 `$ <command> <options> <argument 1> <argument 2> `
 
 #### Examples
-##### Interactive Mode:
 
     $ ls -l
     total 84
@@ -32,4 +31,4 @@ The syntax for executing commands on this simple shell it's the same as other th
 
 ### Authors
 - [Blacksterhack](https://github.com/Blacksterhack)
-- [Elizabeth Cuentas](https://github.com/)
+- [Elizabeth Cuentas](https://github.com/ElizabethCuentas)
