@@ -63,12 +63,12 @@ void checkPATH(char **arr, struct stat *buf)
 			arr[0] = str_concatS(testy, conpollo);
 			if (stat(arr[0], buf) == 0)
 			{
-				free(conpollo), free(testy), WilliamWallace(lemon);
+				free(conpollo), free(testy), blackster(lemon);
 				return;
 			}
 			free(arr[0]), free(testy), arr[0] = 0, testy = 0;
 		}
-		WilliamWallace(lemon), lemon = 0;
+		blackster(lemon), lemon = 0;
 		arr[0] = _strdupS(conpollo), free(conpollo), free(testy);
 	}
 	else if (pathonized != 0)
