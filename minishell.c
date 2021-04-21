@@ -99,7 +99,7 @@ int main(int ac __attribute__((unused)), char **argv)
 		buffer = 0;
 		counter++;
 	}
-	WilliamWallace(environ);
+	blackster(environ);
 	if (isatty(STDIN_FILENO))
 		write(STDOUT_FILENO, "\n", 1);
 	return (statusOut);
