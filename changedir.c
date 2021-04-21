@@ -17,10 +17,10 @@ char **argv, unsigned int *statusOut, int counter)
 		arr = command(buffer);
 		if (_strcmpS(arr[0], "cd") == 0)
 		{
-			execCd(arr, counter, argv, statusOut, 2), WilliamWallace(arr);
+			execCd(arr, counter, argv, statusOut, 2), blackster(arr);
 			return (1);
 		}
-		WilliamWallace(arr);
+		blackster(arr);
 		return (0);
 	}
 	return (1);
