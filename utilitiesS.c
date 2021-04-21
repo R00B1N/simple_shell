@@ -22,25 +22,25 @@ char **argv, int counter, unsigned int *statusOut)
 			if (arr[0][1] == '.' && arr[0][2] == 0)
 			{
 				writeErrPerm(argv[0], arr[0], counter);
-				WilliamWallace(arr);
+				blackster(arr);
 				*statusOut = 127;
 				return (1);
 			}
 			else if (arr[0][1] == 0 && arr[1] == 0)
 			{
-				WilliamWallace(arr);
+				blackster(arr);
 				*statusOut = 0;
 				return (1);
 			}
 			else if (arr[0][1] == 0 && arr[1] != 0)
 			{
 				writeCompoundError(argv[0], arr[0], arr[1], counter);
-				WilliamWallace(arr);
+				blackster(arr);
 				*statusOut = 2;
 				return (1);
 			}
 		}
-		WilliamWallace(arr);
+		blackster(arr);
 		return (0);
 	}
 	return (1);
@@ -89,7 +89,7 @@ int found, int counter, unsigned int *statusOut)
 		}
 		else
 			writeErr(argv[0], arr[0], counter), *statusOut = 127;
-		WilliamWallace(arr);
+		blackster(arr);
 		free(dupHold);
 	}
 }
@@ -114,30 +114,30 @@ char **argv, unsigned int *statusOut)
 			arr = command(buffer);
 			if (_strcmpS(arr[0], "exit") == 0)
 			{
-				execExit(buffer, arr, counter, argv, statusOut), WilliamWallace(arr);
+				execExit(buffer, arr, counter, argv, statusOut), blackster(arr);
 				return (1);
 			}
 			else if (_strcmpS(arr[0], "env") == 0)
 			{
-				execEnv(), WilliamWallace(arr), *statusOut = 0;
+				execEnv(), blackster(arr), *statusOut = 0;
 				return (1);
 			}
 			else if (_strchrS(arr[0], '=') != 0 && arr[0][0] != '=')
 			{
-				variableinator(arr, statusOut, counter, argv), WilliamWallace(arr);
+				variableinator(arr, statusOut, counter, argv), blackster(arr);
 				return (1);
 			}
 			else if (_strcmpS(arr[0], "setenv") == 0)
 			{
-				Auxenv(arr, statusOut), WilliamWallace(arr);
+				Auxenv(arr, statusOut), blackster(arr);
 				return (1);
 			}
 			else if (_strcmpS(arr[0], "unsetenv") == 0)
 			{
-				Auxunenv(arr, statusOut), WilliamWallace(arr);
+				Auxunenv(arr, statusOut), blackster(arr);
 				return (1);
 			}
-			WilliamWallace(arr);
+			blackster(arr);
 		}
 		return (0);
 	}
@@ -163,8 +163,8 @@ unsigned int *statusOut)
 	if (i == 1)
 	{
 		free(buffer);
-		WilliamWallace(arr);
-		WilliamWallace(environ);
+		blackster(arr);
+		blackster(environ);
 		exit(*statusOut);
 	}
 	else if (i > 1)
@@ -189,8 +189,8 @@ unsigned int *statusOut)
 		}
 		status = _atoiS(arr[1]);
 		free(buffer);
-		WilliamWallace(arr);
-		WilliamWallace(environ);
+		blackster(arr);
+		blackster(environ);
 		exit(status);
 	}
 }
