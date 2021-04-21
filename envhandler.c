@@ -50,7 +50,7 @@ int _setenv(char *key, char *value, int overwrite)
 		for (i = 0; environ[i]; i++)
 			toHold[i] = _strdupS(environ[i]);
 		toUnite = str_concatS(key, "="), toHold[i] = str_concatS(toUnite, value);
-		toHold[i + 1] = 0, free(toUnite), WilliamWallace(environ);
+		toHold[i + 1] = 0, free(toUnite), blackster(environ);
 		environ = toHold;
 		return (0);
 	}
@@ -95,7 +95,7 @@ int _unsetenv(char *key)
 			if (_strcmpS(key, environ[i]) != 0)
 				toHold[j] = _strdupS(environ[i]), j++;
 		toHold[j] = 0;
-		WilliamWallace(environ);
+		blackster(environ);
 		environ = toHold;
 		return (0);
 	}
