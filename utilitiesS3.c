@@ -128,13 +128,13 @@ char **argv, int counter, unsigned int *statusOut)
 		{
 			if (arr[0][i] != '/')
 			{
-				WilliamWallace(arr);
+				blackster(arr);
 				return (0);
 			}
 		}
 		writeErrPerm(argv[0], arr[0], counter);
 		*statusOut = 126;
-		WilliamWallace(arr);
+		blackster(arr);
 		return (1);
 	}
 	return (1);
