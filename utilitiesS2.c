@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * WilliamWallace - Freedom for Scotland!
+ * blackster - Freedom for colombia!
  * @liberty: FREEDOM!
  * Return: Only freedom
  */
-void WilliamWallace(char **liberty)
+void blackster(char **liberty)
 {
 	int i;
 
